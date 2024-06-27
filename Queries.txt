@@ -1,0 +1,127 @@
+CREATE DATABASE QuizDB;
+
+--Table Name -> Users
+--Column Name			Data Type
+--ID 					int
+--Name				nvarchar(255)
+--Email				nvarchar(255)
+--Phone				nvarchar(12)
+--Password			nvarchar(255)
+--Total_Questions		int
+--Total_Answers		int
+--Winning_Percentage	decimal(5, 2)
+--
+--
+--Table Name -> Questions
+--Column Name			Data Type
+--ID					int
+--Question			nvarchar(MAX)
+--OptionA				nvarchar(MAX)
+--OptionB				nvarchar(MAX)
+--OptionC				nvarchar(MAX)
+--OptionD				nvarchar(MAX)
+--CorrectAnswer		nvarchar(MAX)
+--Type				nvarchar(MAX)
+
+
+CREATE TABLE Users (
+    ID INT PRIMARY KEY,
+    Name NVARCHAR(255),
+    Email NVARCHAR(255),
+    Phone NVARCHAR(12),
+    Password NVARCHAR(255),
+    Total_Questions INT,
+    Total_Answers INT,
+    Winning_Percentage DECIMAL(5, 2)
+);
+
+-- IF You Got error to insert data
+SET IDENTITY_INSERT Users ON
+INSERT INTO Users (ID, Name, Email, Phone, Password, Total_Questions, Total_Answers, Winning_Percentage)
+VALUES
+    (1, 'John Doe', 'john.doe@example.com', '1234567890', 'password123', 20, 15, 75.50),
+    (2, 'Jane Smith', 'jane.smith@example.com', '9876543210', 'securepass', 30, 25, 83.33),
+    (3, 'Bob Johnson', 'bob.johnson@example.com', '5551234567', 'pass1234', 15, 10, 66.67),
+    (4, 'Alice Brown', 'alice.brown@example.com', '4445556666', 'alicepass', 25, 20, 80.00),
+    (5, 'Charlie Davis', 'charlie.davis@example.com', '1112223333', 'p@ssw0rd', 40, 35, 87.50),
+    (6, 'Eva White', 'eva.white@example.com', '7778889999', 'evapass', 18, 12, 66.67),
+    (7, 'David Lee', 'david.lee@example.com', '3339998888', 'davidpass', 22, 18, 81.82),
+    (8, 'Grace Miller', 'grace.miller@example.com', '6667774444', 'gracepass', 28, 24, 85.71),
+    (9, 'Frank Thomas', 'frank.thomas@example.com', '2223335555', 'frankpass', 35, 30, 85.71),
+    (10, 'Olivia Wilson', 'olivia.wilson@example.com', '9990001111', 'oliviapass', 15, 10, 66.67);
+
+
+CREATE TABLE Questions (
+    ID INT PRIMARY KEY,
+    Question NVARCHAR(MAX),
+    OptionA NVARCHAR(MAX),
+    OptionB NVARCHAR(MAX),
+    OptionC NVARCHAR(MAX),
+    OptionD NVARCHAR(MAX),
+    CorrectAnswer NVARCHAR(MAX),
+    Type NVARCHAR(MAX)
+);
+
+
+INSERT INTO Questions (ID, Question, OptionA, OptionB, OptionC, OptionD, CorrectAnswer, Type)
+VALUES
+    -- General Knowledge
+    (1, 'What is the capital of France?', 'Berlin', 'Madrid', 'Paris', 'Rome', 'Paris', 'General Knowledge'),
+    (2, 'Who wrote "Romeo and Juliet"?', 'Charles Dickens', 'Jane Austen', 'William Shakespeare', 'Leo Tolstoy', 'William Shakespeare', 'General Knowledge'),
+    (3, 'Which planet is known as the Red Planet?', 'Venus', 'Mars', 'Jupiter', 'Saturn', 'Mars', 'General Knowledge'),
+    (4, 'In which year did Christopher Columbus first reach the Americas?', '1492', '1510', '1555', '1601', '1492', 'General Knowledge'),
+    (5, 'What is the largest mammal on Earth?', 'Elephant', 'Blue Whale', 'Giraffe', 'Hippopotamus', 'Blue Whale', 'General Knowledge'),
+    (6, 'Who painted the Mona Lisa?', 'Vincent van Gogh', 'Leonardo da Vinci', 'Pablo Picasso', 'Michelangelo', 'Leonardo da Vinci', 'General Knowledge'),
+    (7, 'Which country is known as the Land of the Rising Sun?', 'China', 'Japan', 'South Korea', 'Vietnam', 'Japan', 'General Knowledge'),
+    (8, 'What is the currency of Brazil?', 'Peso', 'Real', 'Dollar', 'Euro', 'Real', 'General Knowledge'),
+    (9, 'Who is the author of "To Kill a Mockingbird"?', 'George Orwell', 'Harper Lee', 'J.K. Rowling', 'Ernest Hemingway', 'Harper Lee', 'General Knowledge'),
+    (10, 'What is the largest ocean on Earth?', 'Atlantic Ocean', 'Indian Ocean', 'Southern Ocean', 'Pacific Ocean', 'Pacific Ocean', 'General Knowledge'),
+
+    -- History
+    (11, 'In which year did World War II end?', '1945', '1918', '1939', '1955', '1945', 'History'),
+    (12, 'Who was the first President of the United States?', 'Thomas Jefferson', 'Abraham Lincoln', 'George Washington', 'John Adams', 'George Washington', 'History'),
+    (13, 'Which ancient civilization built the pyramids in Egypt?', 'Roman Empire', 'Greek Empire', 'Maya Civilization', 'Ancient Egyptians', 'Ancient Egyptians', 'History'),
+    (14, 'Who was the queen of ancient Egypt known for her beauty?', 'Queen Nefertiti', 'Queen Hatshepsut', 'Cleopatra', 'Queen Tiye', 'Cleopatra', 'History'),
+    (15, 'In which year did the Titanic sink?', '1905', '1912', '1920', '1931', '1912', 'History'),
+    (16, 'Who was the leader of the Soviet Union during World War II?', 'Vladimir Lenin', 'Joseph Stalin', 'Nikita Khrushchev', 'Leon Trotsky', 'Joseph Stalin', 'History'),
+    (17, 'What was the main cause of the American Civil War?', 'Slavery', 'Economic differences', 'States rights', 'Religious conflicts', 'Slavery', 'History'),
+    (18, 'Which ancient city was known for the Hanging Gardens?', 'Babylon', 'Athens', 'Rome', 'Jerusalem', 'Babylon', 'History'),
+    (19, 'Who was the first woman to win a Nobel Prize?', 'Marie Curie', 'Rosa Parks', 'Jane Goodall', 'Mother Teresa', 'Marie Curie', 'History'),
+    (20, 'What event marked the end of the Middle Ages?', 'Renaissance', 'Industrial Revolution', 'French Revolution', 'Enlightenment', 'Renaissance', 'History'),
+
+    -- Science
+    (21, 'What is the chemical symbol for gold?', 'Au', 'Ag', 'Fe', 'Hg', 'Au', 'Science'),
+    (22, 'Which gas is most abundant in the Earth''s atmosphere?', 'Oxygen', 'Nitrogen', 'Carbon Dioxide', 'Argon', 'Nitrogen', 'Science'),
+    (23, 'What is the process by which plants make their own food?', 'Photosynthesis', 'Respiration', 'Fermentation', 'Digestion', 'Photosynthesis', 'Science'),
+    (24, 'What is the smallest unit of matter?', 'Atom', 'Molecule', 'Cell', 'Nucleus', 'Atom', 'Science'),
+    (25, 'Which planet is known as the "Blue Planet"?', 'Earth', 'Mars', 'Jupiter', 'Venus', 'Earth', 'Science'),
+    (26, 'What is the largest organ in the human body?', 'Heart', 'Brain', 'Liver', 'Skin', 'Skin', 'Science'),
+    (27, 'Which scientist developed the theory of relativity?', 'Isaac Newton', 'Albert Einstein', 'Galileo Galilei', 'Niels Bohr', 'Albert Einstein', 'Science'),
+    (28, 'What is the speed of light?', '299,792 kilometers per second', '150,000 kilometers per second', '500,000 kilometers per second', '1 million kilometers per second', '299,792 kilometers per second', 'Science'),
+    (29, 'What is the powerhouse of the cell?', 'Nucleus', 'Ribosome', 'Mitochondrion', 'Endoplasmic reticulum', 'Mitochondrion', 'Science'),
+    (30, 'What is the chemical symbol for water?', 'H2O', 'CO2', 'O2', 'NaCl', 'H2O', 'Science'),
+
+    -- Technology
+    (31, 'Who is the co-founder of Microsoft?', 'Bill Gates', 'Steve Jobs', 'Mark Zuckerberg', 'Larry Page', 'Bill Gates', 'Technology'),
+    (32, 'What does HTML stand for?', 'Hyperlink and Text Markup Language', 'Hyper Text Markup Language', 'High-Level Text Markup Language', 'Hyper Transfer Markup Language', 'Hyper Text Markup Language', 'Technology'),
+    (33, 'In which year was the first iPhone released?', '2005', '2007', '2010', '2012', '2007', 'Technology'),
+    (34, 'What is the programming language used for developing Android apps?', 'Java', 'Swift', 'C++', 'Python', 'Java', 'Technology'),
+    (35, 'Who is the CEO of Tesla?', 'Elon Musk', 'Jeff Bezos', 'Tim Cook', 'Mark Zuckerberg', 'Elon Musk', 'Technology'),
+    (36, 'What is the main function of an operating system?', 'Word processing', 'Managing hardware resources', 'Graphic design', 'Web browsing', 'Managing hardware resources', 'Technology'),
+    (37, 'What is the largest social media platform?', 'Instagram', 'Twitter', 'Facebook', 'LinkedIn', 'Facebook', 'Technology'),
+    (38, 'Which programming language is commonly used for web development?', 'Python', 'Java', 'C#', 'JavaScript', 'JavaScript', 'Technology'),
+    (39, 'What does CPU stand for?', 'Central Processing Unit', 'Computer Processing Unit', 'Central Process Unit', 'Computer Processor Unit', 'Central Processing Unit', 'Technology'),
+    (40, 'Which company developed the first personal computer?', 'Apple', 'IBM', 'Microsoft', 'Dell', 'IBM', 'Technology'),
+
+    -- English
+    (41, 'Which of the following is a synonym for "Benevolent"?', 'Malevolent', 'Hostile', 'Kind', 'Cruel', 'Kind', 'English'),
+    (42, 'What is the plural form of "Child"?', 'Children', 'Childs', 'Childen', 'Childs', 'Children', 'English'),
+    (43, 'Choose the correct spelling: "Occasion"', 'Occassion', 'Occasion', 'Ocassion', 'Occaasion', 'Occasion', 'English'),
+    (44, 'What is the opposite of "Brilliant"?', 'Dull', 'Bright', 'Shiny', 'Glowing', 'Dull', 'English'),
+    (45, 'Which word is a noun: "Run"', 'Running', 'Runner', 'Ran', 'Run', 'Run', 'English'),
+    (46, 'What is the past tense of "Sing"?', 'Sang', 'Sung', 'Sing', 'Singed', 'Sang', 'English'),
+    (47, 'Choose the correct usage: "Their" or "There"', 'Their', 'There', 'Both are correct', 'Neither is correct', 'Both are correct', 'English'),
+    (48, 'Identify the preposition: "The cat is sitting ___ the table."', 'Under', 'On', 'Beside', 'Over', 'Beside', 'English'),
+    (49, 'What is a palindrome?', 'A word that is spelled the same backward as forward', 'A type of fish', 'A mathematical equation', 'A type of poem', 'A word that is spelled the same backward as forward', 'English'),
+	(50, 'Choose the correct sentence: "She is reading a book."', 'She are reading a book.', 'She am reading a book.', 'She is read a book.', 'She is reading a book.', 'She is reading a book.', 'English');
+
