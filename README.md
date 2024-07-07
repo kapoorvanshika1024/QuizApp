@@ -62,37 +62,36 @@ Features
 
     Sign-in Form
     
-    
-    ![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/134d4929-3509-4f7d-9ffd-d75de5616f3d)
+![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/134d4929-3509-4f7d-9ffd-d75de5616f3d)
     
 
     Intro Form
 
-    ![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/d22c95cc-9d0e-4639-b953-4d6f0a2b9e2a)
+![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/d22c95cc-9d0e-4639-b953-4d6f0a2b9e2a)
 
     Questions
 
-    ![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/58965d22-28a1-476c-b160-63017eb084eb)
+![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/58965d22-28a1-476c-b160-63017eb084eb)
 
     Leaderboard Form
-
-    ![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/9d594f5d-fc07-45e7-943a-ba3316928160)
+    
+ ![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/9d594f5d-fc07-45e7-943a-ba3316928160)
 
     Review Form
 
-    ![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/b21e27fb-7c47-45eb-94b3-c1262e7d3c15)
+![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/b21e27fb-7c47-45eb-94b3-c1262e7d3c15)
 
     Sign-up Form
 
-    ![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/4d2adbb1-ed25-4188-8443-4169da90261f)
+![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/4d2adbb1-ed25-4188-8443-4169da90261f)
 
     Forgot Password Form
 
-    ![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/9423621e-9135-4f1c-b751-637f2f6e9b4d)
+![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/9423621e-9135-4f1c-b751-637f2f6e9b4d)
 
     For Changing Password
 
-    ![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/70260843-4fc5-485d-8651-fbca0b58a994)
+![image](https://github.com/kapoorvanshika1024/QuizApp/assets/174171125/70260843-4fc5-485d-8651-fbca0b58a994)
 
 
 
